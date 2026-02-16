@@ -278,7 +278,7 @@ const certModal = document.getElementById("certModal");
 const certImage = document.getElementById("certImage");
 const certCount = document.getElementById("certCount");
 
-const certificates = ["cert1.jpg", "cert2.jpg", "cert3.jpg"];
+const certificates = ["images/cert1.jpg", "images/cert2.jpg", "images/cert3.jpg"];
 let certIndex = 0;
 
 function openCertificates() {
