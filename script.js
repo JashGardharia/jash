@@ -272,3 +272,43 @@ window.addEventListener("resize", () => {
   canvas.height = window.innerHeight;
   initParticles();
 });
+
+// CERTIFICATE SLIDER SYSTEM
+const certModal = document.getElementById("certModal");
+const certImage = document.getElementById("certImage");
+const certCount = document.getElementById("certCount");
+
+const certificates = ["cert1.jpg", "cert2.jpg", "cert3.jpg"];
+let certIndex = 0;
+
+function openCertificates() {
+  certModal.style.display = "flex";
+  certIndex = 0;
+  updateCert();
+}
+
+function closeCertificates() {
+  certModal.style.display = "none";
+}
+
+function nextCert() {
+  certIndex = (certIndex + 1) % certificates.length;
+  updateCert();
+}
+
+function prevCert() {
+  certIndex = (certIndex - 1 + certificates.length) % certificates.length;
+  updateCert();
+}
+
+function updateCert() {
+  certImage.src = certificates[certIndex];
+  certCount.innerText = `${certIndex + 1} / ${certificates.length}`;
+}
+
+// CLOSE MODAL WHEN CLICK OUTSIDE
+certModal.addEventListener("click", (e) => {
+  if (e.target === certModal) {
+    closeCertificates();
+  }
+});
