@@ -689,13 +689,10 @@ section {
   text-decoration: none;
   color: white;
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid rgba(0, 255, 255, 0.15);
-  background: transparent;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: 0.3s;
-  text-align: left;
+  transition: 0.25s;
+  text-decoration: none;
 }
 
 .cert-link-btn:hover {
