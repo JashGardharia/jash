@@ -112,11 +112,11 @@ function openEmail() {
   const status = document.getElementById("copyStatus");
 
   if (!name || !email || !message) {
-    status.innerText = "> Please fill all the fields 😭";
+    status.innerText = " Please fill all the fields 😭";
     return;
   }
 
-  status.innerText = "> Mailing... 📩";
+  status.innerText = " Mailing... 📩";
 
   const subject = encodeURIComponent("Project Inquiry: " + name);
 
@@ -141,7 +141,7 @@ function copyMessage() {
   const status = document.getElementById("copyStatus");
 
   if (!name || !email || !message) {
-    status.innerText = "> No data to copy 🙃";
+    status.innerText = " No data to copy 🙃";
     return;
   }
 
@@ -156,7 +156,7 @@ ${message}
 Thank you!`;
 
   navigator.clipboard.writeText(finalText);
-  status.innerText = "> Copied to clipboard 📋🔥";
+  status.innerText = " Copied to clipboard 📋🔥";
 }
 
 // --- 6. 3D TILT EFFECT (FIXED: NO DRUNK BOXES) ---
