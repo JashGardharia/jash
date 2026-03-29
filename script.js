@@ -312,3 +312,33 @@ certModal.addEventListener("click", (e) => {
     closeCertificates();
   }
 });
+
+const funFactBtn = document.getElementById("funFactBtn");
+const funFactBox = document.getElementById("funFactBox");
+
+const facts = [
+"Your ESP32 has more power than Moon-landing computers 🚀",
+"Static shock you feel can be thousands of volts ⚡",
+"Your body can act as an antenna 📡 (dont try duh!)",
+"A single lightning strike can exceed 1 billion volts ⚡",
+"A calculator has more processing power than early fighter jets’ onboard computers ✈️",
+"Your microwave can interfere with WiFi because they share frequency 🍲📶 (So now your food is actually cooked 💀)",
+"The computer used in Apollo 11 Moon Landing had only ~4KB RAM 🤯",
+"Hackers have extracted encryption keys just by listening to CPU sounds 🔊 (And the fun part, I know that 💀)",
+"Even light bulbs can leak data via tiny brightness fluctuations 💡",
+"Data can be stolen using fan noise from a computer 🌀 (but idk..so no worries!)",
+"You can read data from a screen by analyzing its electromagnetic leaks 👀",
+"Some devices secretly wake up for milliseconds even when “off” 👀 (Nah not the one you're thinking of..)"
+];
+
+funFactBtn.addEventListener("click", () => {
+const randomFact = facts[Math.floor(Math.random() * facts.length)];
+
+funFactBox.textContent = randomFact;
+funFactBox.classList.add("active");
+
+// auto hide after 4 sec
+setTimeout(() => {
+funFactBox.classList.remove("active");
+}, 4000);
+});
