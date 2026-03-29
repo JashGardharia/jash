@@ -34,7 +34,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 999;
   transition: 0.5s;
 }
 
@@ -725,7 +725,7 @@ right: 20px;
 display: flex;
 align-items: center;
 gap: 10px;
-z-index: 999;
+z-index: 9999;
 }
 
 /* BOX */
