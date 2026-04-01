@@ -776,12 +776,17 @@ animation: bounceEgg 1.2s infinite;
 
 /* EGG */
 .egg {
-font-size: 1.2rem;
+font-size: 2rem;
 }
 
 /* TEXT */
 .label {
 opacity: 0.9;
+}
+.label {
+writing-mode: vertical-rl;   /* vertical text */
+text-orientation: mixed;
+font-size: 0.75rem;
 }
 
 /* HOVER */
