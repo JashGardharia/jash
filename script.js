@@ -340,8 +340,8 @@ funFactBox.classList.add("active");
 // auto hide after 4 sec
 setTimeout(() => {
 funFactBox.classList.remove("active");
-}, 4000);
+}, 6000);
 });
 setTimeout(() => {
   factBox.style.opacity = "0";
-}, 4000); // 4 seconds minimum
+}, 6000); // 6 seconds minimum
