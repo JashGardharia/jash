@@ -721,7 +721,8 @@ section {
 #funFactContainer {
 position: fixed;
 bottom: 90px; /* above your back-to-top */
-right: 20px;
+left: 20px;
+right: auto;
 display: flex;
 align-items: center;
 gap: 10px;
@@ -751,18 +752,25 @@ transform: translateX(0);
 }
 
 #funFactBtn {
+width: 70px;
+height: 130px;
+
 display: flex;
+flex-direction: column; /* THIS FIXES EVERYTHING */
 align-items: center;
+justify-content: center;
 gap: 6px;
-padding: 8px 12px;
-border-radius: 25px;
+
+border-radius: 50px;
 border: none;
 cursor: pointer;
+
 background: #00f3ff;
-color: white;
+color: #050b14;
+
 font-size: 0.85rem;
 font-weight: 500;
-position: relative;
+
 animation: bounceEgg 1.2s infinite;
 }
 
