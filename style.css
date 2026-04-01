@@ -720,9 +720,8 @@ section {
 /* FUN FACT BUTTON */
 #funFactContainer {
 position: fixed;
-bottom: 90px; /* above your back-to-top */
-left: 20px;
-right: auto;
+bottom: 35px; /* above your back-to-top */
+right: 35px;
 display: flex;
 align-items: center;
 gap: 10px;
