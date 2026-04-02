@@ -330,18 +330,13 @@ const facts = [
 "You can read data from a screen by analyzing its electromagnetic leaks 👀",
 "Some devices secretly wake up for milliseconds even when “off” 👀 (Nah not the one you're thinking of..)"
 ];
-
 funFactBtn.addEventListener("click", () => {
-const randomFact = facts[Math.floor(Math.random() * facts.length)];
+  const randomFact = facts[Math.floor(Math.random() * facts.length)];
 
-funFactBox.textContent = randomFact;
-funFactBox.classList.add("active");
+  funFactBox.textContent = randomFact;
+  funFactBox.classList.add("active");
 
-// auto hide after 4 sec
-setTimeout(() => {
-funFactBox.classList.remove("active");
-}, 6000);
+  setTimeout(() => {
+    funFactBox.classList.remove("active");
+  }, 6000);
 });
-setTimeout(() => {
-  factBox.style.opacity = "0";
-}, 6000); // 6 seconds minimum
