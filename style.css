@@ -720,8 +720,8 @@ section {
 /* FUN FACT BUTTON CONTAINER */
 #funFactContainer {
   position: fixed;
-  bottom: 55px;
-  right: 25px;
+  bottom: 90px;
+  right: 30px;
   display: flex;
   flex-direction: row-reverse; /* FIXES LEFT ISSUE */
   align-items: center;
