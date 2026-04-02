@@ -717,92 +717,68 @@ section {
 .btn i{
   margin-right:6px;
 }
-/* FUN FACT BUTTON */
+/* FUN FACT BUTTON CONTAINER */
 #funFactContainer {
-position: fixed;
-bottom: 35px; /* above your back-to-top */
-right: 35px;
-display: flex;
-align-items: center;
-gap: 10px;
-z-index: 9999;
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  display: flex;
+  flex-direction: row-reverse; /* FIXES LEFT ISSUE */
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
 }
 
-/* BOX */
+/* FACT BOX */
 #funFactBox {
-max-width: 260px;
-padding: 12px 15px;
-font-size: 0.85rem;
-background: rgba(255,255,255,0.05);
-border: 1px solid rgba(255,255,255,0.1);
-border-radius: 12px;
-color: #e2e8f0;
-backdrop-filter: blur(10px);
-opacity: 0;
-transform: translateX(20px);
-transition: 0.3s;
-pointer-events: none;
+  max-width: 260px;
+  padding: 12px 15px;
+  font-size: 0.85rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  color: #e2e8f0;
+  backdrop-filter: blur(10px);
+
+  opacity: 0;
+  transform: translateX(-20px); /* correct direction */
+  transition: 0.3s;
+  pointer-events: none;
 }
 
 /* SHOW */
 #funFactBox.active {
-opacity: 1;
-transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
+/* BUTTON */
 #funFactBtn {
-width: 70px;
-height: 130px;
+  width: 70px;
+  height: 130px;
 
-display: flex;
-flex-direction: column; /* THIS FIXES EVERYTHING */
-align-items: center;
-justify-content: center;
-gap: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-border-radius: 50px;
-border: none;
-cursor: pointer;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
 
-background: #00f3ff;
-color: #050b14;
+  background: #00f3ff;
+  color: #050b14;
 
-font-size: 0.85rem;
-font-weight: 500;
+  font-size: 1.5rem;
 
-animation: bounceEgg 1.2s infinite;
+  animation: bounce 1.2s infinite;
 }
 
-/* EGG */
-.egg {
-font-size: 2rem;
-}
-
-/* TEXT */
-.label {
-opacity: 0.9;
-}
-.label {
-writing-mode: vertical-rl;   /* vertical text */
-text-orientation: mixed;
-font-size: 0.75rem;
-}
-
-/* HOVER */
-#funFactBtn:hover {
-transform: scale(1.08);
-box-shadow: 0 10px 20px rgba(99,102,241,0.4);
-}
-
-.bounce {
-display: inline-block;
-animation: bounce 1.2s infinite;
-}
-
+/* BOUNCE ANIMATION */
 @keyframes bounce {
-0%   { transform: translateY(0) rotate(0deg); }
-25%  { transform: translateY(-8px) rotate(-8deg); }
-50%  { transform: translateY(0) rotate(8deg); }
-75%  { transform: translateY(-4px) rotate(-5deg); }
-100% { transform: translateY(0) rotate(0deg); }
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-8px) rotate(-8deg); }
+  50%  { transform: translateY(0) rotate(8deg); }
+  75%  { transform: translateY(-4px) rotate(-5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
 }
