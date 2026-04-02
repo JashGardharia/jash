@@ -743,7 +743,7 @@ section {
   right: 90px; /* adjust based on button width */
 
   opacity: 0;
-  transform: translateX(-20px); /* correct direction */
+  transform: translateX(20px); /* correct direction */
   transition: 0.3s;
   pointer-events: none;
   
