@@ -337,10 +337,6 @@ funFactBtn.addEventListener("click", () => {
   funFactBox.classList.add("active");
 
   setTimeout(() => {
-  loader.style.display = "none";
-
-  // 👇 ADD THIS LINE
-  document.getElementById("funFactContainer").classList.add("show");
-
-}, 1600);
+    funFactBox.classList.remove("active");
+  }, 6000);
 });
