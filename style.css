@@ -300,29 +300,25 @@ display:grid;
 grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 gap:20px;
 }
+
 .skill-card {
-  padding: 30px;
-  border-radius: 18px;
+  padding: 18px 20px; /* smaller than stat box */
+  border-radius: 16px;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-  background: linear-gradient(135deg, rgba(0,255,255,0.15), rgba(0,255,255,0.25));
+  transition: 0.3s;
 
-  /* nice transparent cyan glow background */
-  border: 1px solid rgba(0, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-  color: white;
-  font-weight: 500;
-  font-size: 1rem;
+  /* SAME STYLE AS STAT BOX */
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 255, 255, 0.15);
 }
 
-/* Hover effect */
+/* Hover SAME as stats */
 .skill-card:hover {
-  transform: translateY(-8px) scale(1.05);
-  background: rgba(0, 255, 255, 0.25);
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
-} 
+  border: 1px solid cyan;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
 
 /* CATEGORY BLOCK */
 .category {
