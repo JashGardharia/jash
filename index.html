@@ -150,39 +150,41 @@
   </section>
 
   <section class="mini-lab">
-   <h2>Interactive Lab ⚡</h2>
+  <h2>Interactive Lab ⚡</h2>
 
-   <div class="controls">
+  <div class="lab-bar">
 
-    <!-- Toggle Switch -->
-    <div class="control">
-      <label class="switch">
+    <!-- SWITCH -->
+    <div class="module">
+      <div class="toggle-real">
         <input type="checkbox" id="toggleSwitch">
-        <span class="slider"></span>
-      </label>
-      <p>Switch</p>
+        <label for="toggleSwitch"></label>
+      </div>
+      <span>Switch</span>
     </div>
 
-    <!-- IR Sensor -->
-    <div class="control">
-      <div class="ir-sensor" id="irSensor"></div>
-      <p>IR Sensor</p>
+    <!-- IR SENSOR -->
+    <div class="module">
+      <div class="ir-real" id="irSensor">
+        <div class="ir-eye"></div>
+      </div>
+      <span>IR Sensor</span>
     </div>
 
-    <!-- Touch Sensor -->
-    <div class="control">
-      <button class="touch-btn" id="touchSensor">TOUCH</button>
-      <p>Touch Sensor</p>
+    <!-- TOUCH -->
+    <div class="module">
+      <div class="touch-real" id="touchSensor">TOUCH</div>
+      <span>Touch</span>
     </div>
 
-   </div>
+  </div>
 
   <!-- LED -->
-   <div class="led-container">
-    <div class="led" id="mainLED"></div>
-    <p>Output LED</p>
-   </div>
-  </section>
+  <div class="led-section">
+    <div class="led-real" id="led"></div>
+    <p>LED Output</p>
+  </div>
+  </section> 
 
   <!-- PROJECTS SECTION -->
   <section class="projects" id="projects">
