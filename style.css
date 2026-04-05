@@ -331,15 +331,6 @@ gap:20px;
   color: cyan;
   font-size: 1.3rem;
 }
-
-/* GRID FOR EACH CATEGORY */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, max-content));
-  gap: 18px;
-  justify-content: start; /* THIS makes it horizontal, not stretched */
-}
-
 /* KEEP YOUR EXISTING CARD STYLE (no change needed) */
 /* PROJECTS */
 .projects-grid {
