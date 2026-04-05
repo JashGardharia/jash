@@ -378,40 +378,32 @@ lucide.createIcons();
 const toggle = document.getElementById("toggleSwitch");
 const ir = document.getElementById("irSensor");
 const touch = document.getElementById("touchSensor");
-const led = document.getElementById("mainLED");
+const led = document.getElementById("led");
 
-function turnOn(source) {
-  // turn OFF everything first
+function resetAll() {
   toggle.checked = false;
   led.classList.remove("on");
-
-  // activate selected
-  if (source === "toggle") {
-    toggle.checked = true;
-    led.classList.add("on");
-  }
-
-  if (source === "ir") {
-    led.classList.add("on");
-  }
-
-  if (source === "touch") {
-    led.classList.add("on");
-  }
 }
 
-// Toggle
+/* SWITCH */
 toggle.addEventListener("change", () => {
-  if (toggle.checked) turnOn("toggle");
-  else led.classList.remove("on");
+  if (toggle.checked) {
+    resetAll();
+    toggle.checked = true;
+    led.classList.add("on");
+  } else {
+    led.classList.remove("on");
+  }
 });
 
-// IR Sensor (hover detection)
+/* IR SENSOR (ONLY WHEN HOVER FRONT AREA) */
 ir.addEventListener("mouseenter", () => {
-  turnOn("ir");
+  resetAll();
+  led.classList.add("on");
 });
 
-// Touch Sensor
+/* TOUCH SENSOR */
 touch.addEventListener("click", () => {
-  turnOn("touch");
+  resetAll();
+  led.classList.add("on");
 });
