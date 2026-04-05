@@ -311,6 +311,27 @@ section {
   border-bottom: 1px solid rgba(0, 255, 255, 0.08);
 }
 
+/* CATEGORY BLOCK */
+.category {
+  margin-bottom: 40px;
+}
+
+/* HEADING */
+.category h3 {
+  margin-bottom: 16px;
+  color: cyan;
+  font-size: 1.3rem;
+}
+
+/* GRID FOR EACH CATEGORY */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, max-content));
+  gap: 18px;
+  justify-content: start; /* THIS makes it horizontal, not stretched */
+}
+
+/* KEEP YOUR EXISTING CARD STYLE (no change needed) */
 /* PROJECTS */
 .projects-grid {
   display: grid;
