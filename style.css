@@ -843,3 +843,126 @@ section {
   filter: drop-shadow(0 0 8px cyan);
   transform: translateY(-3px);
 }
+.mini-lab {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔥 TOGGLE SWITCH */
+.switch {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  transform: rotate(-10deg);
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  background: #222;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(0,255,255,0.3);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 2px;
+  top: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background: cyan;
+  box-shadow: 0 0 10px cyan;
+}
+
+input:checked + .slider::before {
+  transform: translateX(30px);
+}
+
+/* 🔥 IR SENSOR */
+.ir-sensor {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, #111 40%, #000);
+  border-radius: 50%;
+  border: 2px solid cyan;
+  position: relative;
+  cursor: pointer;
+}
+
+.ir-sensor::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: -15px;
+  left: -15px;
+  border-radius: 50%;
+  background: rgba(0,255,255,0.05);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.ir-sensor:hover::after {
+  opacity: 1;
+}
+
+/* 🔥 TOUCH SENSOR */
+.touch-btn {
+  padding: 12px 18px;
+  background: #300;
+  border: 1px solid red;
+  color: red;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.touch-btn:hover {
+  box-shadow: 0 0 10px red;
+}
+
+/* 🔥 LED */
+.led-container {
+  margin-top: 20px;
+}
+
+.led {
+  width: 30px;
+  height: 30px;
+  background: #111;
+  border-radius: 50%;
+  margin: auto;
+  border: 2px solid #333;
+  transition: 0.3s;
+}
+
+.led.on {
+  background: red;
+  box-shadow: 0 0 20px red, 0 0 40px red;
+}
