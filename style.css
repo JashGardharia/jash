@@ -306,9 +306,9 @@ gap:20px;
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  background: linear-gradient(135deg, rgba(0,255,255,0.15), rgba(0,255,255,0.25));
 
   /* nice transparent cyan glow background */
-  background: rgba(0, 255, 255, 0.15);
   border: 1px solid rgba(0, 255, 255, 0.25);
   backdrop-filter: blur(10px);
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
