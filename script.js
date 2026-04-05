@@ -373,3 +373,4 @@ const observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(document.querySelector(".stats"));
+lucide.createIcons();
